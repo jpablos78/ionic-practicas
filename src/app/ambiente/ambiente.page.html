@@ -4,11 +4,50 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Ambiente
+      Ambientes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
+  <!--
+  <ion-item>
+    
+    <ion-select placeholder="Seleccione el Ambiente">
+      <ion-select-option value="1">Ambiente de Pruebas</ion-select-option>
+      <ion-select-option value="2">Ambiente de Produccion</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+
+
+  </section>-->
+
+  <ion-list>
+    <ion-item>
+      <!--<ion-label>Pet</ion-label>-->
+      <ion-select placeholder="Seleccione el Ambiente" interface="action-sheet" value="1">
+        <ion-select-option value="1">Ambiente de Pruebas</ion-select-option>
+        <ion-select-option value="2">Ambiente de Produccion</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Direccion Recepcion </ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Direccion Autorizacion </ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <section>
+    <ion-button color="primary" expand="block">Aceptar</ion-button>
+  </section>
 
 </ion-content>
