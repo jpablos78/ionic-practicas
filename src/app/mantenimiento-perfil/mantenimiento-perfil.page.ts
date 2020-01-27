@@ -16,6 +16,25 @@ export class MantenimientoPerfilPage implements OnInit {
   }
 
   onClickBtnAdd() {
+    console.log("onClick");
     this.router.navigate(['/mantenimiento-perfil-add']);
+  }
+
+  onClickList() {
+    console.log("onClickList");
+  }
+
+  onPress($event) {
+    console.log("onPress", $event);
+    //this.pressState = 'pressing';
+    //this.startInterval();
+  }
+
+  onPressUp($event) {
+    console.log("onPressUp", $event);
+    //this.pressState = 'released';
+    //this.stopInterval();
+    this.router.navigate(['/mantenimiento-perfil-add']);
+
   }
 }
