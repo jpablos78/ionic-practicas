@@ -10,5 +10,148 @@
 </ion-header>
 
 <ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="onClickBtnAdd()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
+  <ion-list>
+    <!--<ion-item class="ion-text-wrap">
+      <ion-grid style="margin: 0;">
+        <ion-row>
+          <ion-col>
+            <ion-label>Pokémon Yellow</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>Pokémon Yellow</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>-->
+    <!--<ion-item>
+      <ion-grid>
+        <ion-row class="ion-no-padding">
+          <ion-col col-3 class="ion-no-padding">
+            <div class="ion-no-margin">
+              item 1
+            </div>
+          </ion-col>
+          <ion-col col-3 no-padding>
+            item 2
+          </ion-col>
+          <ion-col col-3 no-padding>
+            item 3
+          </ion-col>
+          <ion-col col-3 no-padding>
+            item 4
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            Otra columna :)
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>-->
+    <ion-item class="ion-margin-bottom" [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-no-padding">
+            Codigo:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            1
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding">
+            Descripcion:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            Administrador
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding">
+            Estado:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            ACTIVO
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom" [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-no-padding">
+            Codigo:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            2
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding">
+            Descripcion:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            Contabilidad
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding">
+            Estado:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            ACTIVO
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom" [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-no-padding">
+            Codigo:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            3
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding">
+            Descripcion:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            Ventas
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding">
+            Estado:
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            ACTIVO
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <!--<ion-item>
+      <ion-label>Mega Man X</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>The Legend of Zelda</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pac-Man</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Super Mario World</ion-label>
+    </ion-item>-->
+  </ion-list>
 </ion-content>

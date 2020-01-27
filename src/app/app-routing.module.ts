@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'procesar-documentos-electronicos',
     loadChildren: () => import('./procesar-documentos-electronicos/procesar-documentos-electronicos.module').then( m => m.ProcesarDocumentosElectronicosPageModule)
   },
+  {
+    path: 'mantenimiento-perfil-add',
+    loadChildren: () => import('./mantenimiento-perfil/mantenimiento-perfil-add/mantenimiento-perfil-add.module').then( m => m.MantenimientoPerfilAddPageModule)
+  }
 ];
 
 @NgModule({

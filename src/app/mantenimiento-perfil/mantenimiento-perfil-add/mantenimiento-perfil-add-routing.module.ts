@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MantenimientoPerfilPage } from './mantenimiento-perfil.page';
+import { MantenimientoPerfilAddPage } from './mantenimiento-perfil-add.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: MantenimientoPerfilPage
+    component: MantenimientoPerfilAddPage
   }
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MantenimientoPerfilPageRoutingModule {}
+export class MantenimientoPerfilAddPageRoutingModule {}
