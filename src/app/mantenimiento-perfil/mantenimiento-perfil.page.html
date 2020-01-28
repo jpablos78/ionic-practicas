@@ -17,127 +17,34 @@
   </ion-fab>
 
   <ion-list>
-    <!--<ion-item class="ion-text-wrap">
-      <ion-grid style="margin: 0;">
-        <ion-row>
-          <ion-col>
-            <ion-label>Pokémon Yellow</ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-label>Pokémon Yellow</ion-label>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>-->
-    <!--<ion-item>
-      <ion-grid>
-        <ion-row class="ion-no-padding">
-          <ion-col col-3 class="ion-no-padding">
-            <div class="ion-no-margin">
-              item 1
-            </div>
-          </ion-col>
-          <ion-col col-3 no-padding>
-            item 2
-          </ion-col>
-          <ion-col col-3 no-padding>
-            item 3
-          </ion-col>
-          <ion-col col-3 no-padding>
-            item 4
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            Otra columna :)
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>-->
-    <ion-item class="ion-margin-bottom" [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
-      <ion-grid>
-        <ion-row>
-          <ion-col class="ion-no-padding">
-            Codigo:
-          </ion-col>
-          <ion-col class="ion-no-padding">
-            1
-          </ion-col>
-        </ion-row>
-        <ion-row class="ion-margin-top">
-          <ion-col class="ion-no-padding">
-            Descripcion:
-          </ion-col>
-          <ion-col class="ion-no-padding">
-            Administrador
-          </ion-col>
-        </ion-row>
-        <ion-row class="ion-margin-top">
-          <ion-col class="ion-no-padding">
-            Estado:
-          </ion-col>
-          <ion-col class="ion-no-padding">
-            ACTIVO
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-
-    <ion-item class="ion-margin-bottom" [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
-      <ion-grid>
-        <ion-row>
-          <ion-col class="ion-no-padding">
-            Codigo:
-          </ion-col>
-          <ion-col class="ion-no-padding">
-            2
-          </ion-col>
-        </ion-row>
-        <ion-row class="ion-margin-top">
-          <ion-col class="ion-no-padding">
-            Descripcion:
-          </ion-col>
-          <ion-col class="ion-no-padding">
-            Contabilidad
-          </ion-col>
-        </ion-row>
-        <ion-row class="ion-margin-top">
-          <ion-col class="ion-no-padding">
-            Estado:
-          </ion-col>
-          <ion-col class="ion-no-padding">
-            ACTIVO
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
+    <ion-list-header>
+      Listado de Perfiles
+    </ion-list-header>
 
     <ion-item-sliding>
-      <ion-item class="ion-margin-bottom" (click)="onClickList()" (press)="onPress($event)"
-        (pressup)="onPressUp($event)" routerDirection="forward">
-        <!--<ion-item class="ion-margin-bottom" [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">-->
+      <ion-item [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
         <ion-grid>
           <ion-row>
-            <ion-col class="ion-no-padding">
+            <ion-col>
               Codigo:
             </ion-col>
-            <ion-col class="ion-no-padding">
-              3
+            <ion-col>
+              1
             </ion-col>
           </ion-row>
-          <ion-row class="ion-margin-top">
-            <ion-col class="ion-no-padding">
+          <ion-row>
+            <ion-col>
               Descripcion:
             </ion-col>
-            <ion-col class="ion-no-padding">
-              Ventas
+            <ion-col>
+              Administrador
             </ion-col>
           </ion-row>
-          <ion-row class="ion-margin-top">
-            <ion-col class="ion-no-padding">
+          <ion-row>
+            <ion-col>
               Estado:
             </ion-col>
-            <ion-col class="ion-no-padding">
+            <ion-col>
               ACTIVO
             </ion-col>
           </ion-row>
@@ -145,193 +52,82 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger">
+        <ion-item-option color="danger" (click)="onClickBtnDelete()">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
     <ion-item-sliding>
-      <ion-item>
-        <ion-label>
-
-
-          <h2>
-            <p>Codigo:</p>
-          </h2>
-
-          <p>Descripcion:</p>
-          <p>Estado:</p>
-
-        </ion-label>
-        <ion-note slot="end">
-          <p>4</p>
-          <p>Ventas</p>
-          <p>ACTIVO</p>
-        </ion-note>
+      <ion-item [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              Codigo:
+            </ion-col>
+            <ion-col>
+              2
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Descripcion:
+            </ion-col>
+            <ion-col>
+              Contabilidad
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Estado:
+            </ion-col>
+            <ion-col>
+              ACTIVO
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger">
+        <ion-item-option color="danger" (click)="onClickBtnDelete()">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
-
-    <!--<ion-item>
-      <ion-label>Mega Man X</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>The Legend of Zelda</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Pac-Man</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Super Mario World</ion-label>
-    </ion-item>-->
-  </ion-list>
-
-
-
-  <ion-list>
-    <!-- Sliding item with text options on both sides -->
     <ion-item-sliding>
-      <ion-item-options side="start">
-        <ion-item-option (click)="favorite(item)">Favorite</ion-item-option>
-        <ion-item-option color="danger" (click)="share(item)">Share</ion-item-option>
-      </ion-item-options>
-
-      <ion-item>
-        <ion-label>Item Options</ion-label>
+      <ion-item [routerLink]="['/mantenimiento-perfil-add']" routerDirection="forward">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              Codigo:
+            </ion-col>
+            <ion-col>
+              3
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Descripcion:
+            </ion-col>
+            <ion-col>
+              VENTAS
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Estado:
+            </ion-col>
+            <ion-col>
+              ACTIVO
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <!-- Sliding item with expandable options on both sides -->
-    <ion-item-sliding>
-      <ion-item-options side="start">
-        <ion-item-option color="danger" expandable>
-          Delete
-        </ion-item-option>
-      </ion-item-options>
-
-      <ion-item>
-        <ion-label>Expandable Options</ion-label>
-      </ion-item>
-
-      <ion-item-options side="end">
-        <ion-item-option color="tertiary" expandable>
-          Archive
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <!-- Multi-line sliding item with icon options on both sides -->
-    <ion-item-sliding id="item100">
-      <ion-item href="#">
-        <ion-label>
-          <h2>HubStruck Notifications</h2>
-          <p>A new message in your network</p>
-          <p>Oceanic Next has joined your network</p>
-        </ion-label>
-        <ion-note slot="end">
-          10:45 AM
-        </ion-note>
-      </ion-item>
-
-      <ion-item-options side="start">
-        <ion-item-option>
-          <ion-icon slot="icon-only" name="heart"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-
-      <ion-item-options side="end">
-        <ion-item-option color="danger">
+        <ion-item-option color="danger" (click)="onClickBtnDelete()">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
-        </ion-item-option>
-        <ion-item-option>
-          <ion-icon slot="icon-only" name="star"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <!-- Sliding item with icon start options on end side -->
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
-          Sliding Item, Icons Start
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option color="primary">
-          <ion-icon slot="start" name="more"></ion-icon>
-          More
-        </ion-item-option>
-        <ion-item-option color="secondary">
-          <ion-icon slot="start" name="archive"></ion-icon>
-          Archive
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <!-- Sliding item with icon end options on end side -->
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
-          Sliding Item, Icons End
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option color="primary">
-          <ion-icon slot="end" name="more"></ion-icon>
-          More
-        </ion-item-option>
-        <ion-item-option color="secondary">
-          <ion-icon slot="end" name="archive"></ion-icon>
-          Archive
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <!-- Sliding item with icon top options on end side -->
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
-          Sliding Item, Icons Top
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option color="primary">
-          <ion-icon slot="top" name="more"></ion-icon>
-          More
-        </ion-item-option>
-        <ion-item-option color="secondary">
-          <ion-icon slot="top" name="archive"></ion-icon>
-          Archive
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <!-- Sliding item with icon bottom options on end side -->
-    <ion-item-sliding>
-      <ion-item>
-        <ion-label>
-          Sliding Item, Icons Bottom
-        </ion-label>
-      </ion-item>
-      <ion-item-options>
-        <ion-item-option color="primary">
-          <ion-icon slot="bottom" name="more"></ion-icon>
-          More
-        </ion-item-option>
-        <ion-item-option color="secondary">
-          <ion-icon slot="bottom" name="archive"></ion-icon>
-          Archive
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>

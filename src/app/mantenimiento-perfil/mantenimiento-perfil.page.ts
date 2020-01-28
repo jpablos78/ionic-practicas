@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { async } from 'rxjs/internal/scheduler/async';
 
 @Component({
   selector: 'app-mantenimiento-perfil',
@@ -10,6 +12,7 @@ export class MantenimientoPerfilPage implements OnInit {
 
   constructor(
     public router: Router,
+    private alertController: AlertController
   ) { }
 
   ngOnInit() {
@@ -18,6 +21,20 @@ export class MantenimientoPerfilPage implements OnInit {
   onClickBtnAdd() {
     console.log("onClick");
     this.router.navigate(['/mantenimiento-perfil-add']);
+  }
+
+  async onClickBtnDelete() {
+    console.log('delete');
+
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      subHeader: 'Subtitle',
+      message: 'This is an alert message.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
   }
 
   onClickList() {
