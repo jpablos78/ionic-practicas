@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { ButtonModule } from 'primeng/button';
+import {TreeModule} from 'primeng/tree';
+import {TreeNode} from 'primeng/api';
 
 import { PermisosPageRoutingModule } from './permisos-routing.module';
 
@@ -13,8 +16,10 @@ import { PermisosPage } from './permisos.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PermisosPageRoutingModule
+    PermisosPageRoutingModule,
+    ButtonModule,
+    TreeModule
   ],
   declarations: [PermisosPage]
 })
-export class PermisosPageModule {}
+export class PermisosPageModule { }
