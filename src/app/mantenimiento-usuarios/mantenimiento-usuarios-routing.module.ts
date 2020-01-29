@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: MantenimientoUsuariosPage
+  },  {
+    path: 'mantenimiento-usuarios-add',
+    loadChildren: () => import('./mantenimiento-usuarios-add/mantenimiento-usuarios-add.module').then( m => m.MantenimientoUsuariosAddPageModule)
   }
+
 ];
 
 @NgModule({

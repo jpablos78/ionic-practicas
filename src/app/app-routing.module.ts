@@ -7,9 +7,9 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  { 
-    path: 'home', 
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule) 
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'contacts',
@@ -21,43 +21,52 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'cambio-clave',
-    loadChildren: () => import('./cambio-clave/cambio-clave.module').then( m => m.CambioClavePageModule)
+    loadChildren: () => import('./cambio-clave/cambio-clave.module').then(m => m.CambioClavePageModule)
   },
   {
     path: 'favoritos',
-    loadChildren: () => import('./favoritos/favoritos.module').then( m => m.FavoritosPageModule)
+    loadChildren: () => import('./favoritos/favoritos.module').then(m => m.FavoritosPageModule)
   },
   {
     path: 'mantenimiento-perfil',
-    loadChildren: () => import('./mantenimiento-perfil/mantenimiento-perfil.module').then( m => m.MantenimientoPerfilPageModule)
+    loadChildren: () => import('./mantenimiento-perfil/mantenimiento-perfil.module').then(m => m.MantenimientoPerfilPageModule)
   },
   {
     path: 'mantenimiento-usuarios',
-    loadChildren: () => import('./mantenimiento-usuarios/mantenimiento-usuarios.module').then( m => m.MantenimientoUsuariosPageModule)
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./mantenimiento-usuarios/mantenimiento-usuarios.module').then(m => m.MantenimientoUsuariosPageModule)
+      },
+      {
+        path: ":idUsuario",
+        loadChildren: () => import('./mantenimiento-usuarios/mantenimiento-usuarios-add/mantenimiento-usuarios-add.module').then(m => m.MantenimientoUsuariosAddPageModule)
+      }
+    ]
   },
   {
     path: 'permisos',
-    loadChildren: () => import('./permisos/permisos.module').then( m => m.PermisosPageModule)
+    loadChildren: () => import('./permisos/permisos.module').then(m => m.PermisosPageModule)
   },
   {
     path: 'ambiente',
-    loadChildren: () => import('./ambiente/ambiente.module').then( m => m.AmbientePageModule)
+    loadChildren: () => import('./ambiente/ambiente.module').then(m => m.AmbientePageModule)
   },
   {
     path: 'parametros-fe',
-    loadChildren: () => import('./parametros-fe/parametros-fe.module').then( m => m.ParametrosFePageModule)
+    loadChildren: () => import('./parametros-fe/parametros-fe.module').then(m => m.ParametrosFePageModule)
   },
   {
     path: 'procesar-documentos-electronicos',
-    loadChildren: () => import('./procesar-documentos-electronicos/procesar-documentos-electronicos.module').then( m => m.ProcesarDocumentosElectronicosPageModule)
+    loadChildren: () => import('./procesar-documentos-electronicos/procesar-documentos-electronicos.module').then(m => m.ProcesarDocumentosElectronicosPageModule)
   },
   {
     path: 'mantenimiento-perfil-add',
-    loadChildren: () => import('./mantenimiento-perfil/mantenimiento-perfil-add/mantenimiento-perfil-add.module').then( m => m.MantenimientoPerfilAddPageModule)
+    loadChildren: () => import('./mantenimiento-perfil/mantenimiento-perfil-add/mantenimiento-perfil-add.module').then(m => m.MantenimientoPerfilAddPageModule)
   }
 ];
 
