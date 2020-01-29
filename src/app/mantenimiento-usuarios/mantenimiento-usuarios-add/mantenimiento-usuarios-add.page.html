@@ -1,9 +1,63 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mantenimiento-usuarios"></ion-back-button>
+    </ion-buttons>
     <ion-title>mantenimiento-usuarios-add</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" value="MARIA"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input type="text" value="IBARRA"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Perfil</ion-label>
+    <ion-select placeholder="Seleccione el Perfil" interface="action-sheet" value="C">
+      <ion-select-option value="A">ADMINISTRADOR</ion-select-option>
+      <ion-select-option value="C">CONTABILIDAD</ion-select-option>
+      <ion-select-option value="X">SISTEMAS</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" value="mi@yahoo.com"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Estado</ion-label>
+    <ion-select placeholder="Seleccione el Estado" interface="action-sheet" value="1">
+      <ion-select-option value="1">Activo</ion-select-option>
+      <ion-select-option value="2">Inactivo</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Cambiar Clave</ion-label>
+    <ion-toggle slot="start" name="kiwi" color="success" (ionChange)="onChangeToggle($event)"></ion-toggle>
+  </ion-item>
+
+  <div *ngIf="checked">
+    <ion-item>
+      <ion-label position="floating">Cambiar Clave</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar Clave</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </div>
+
+  <section>
+    <ion-button color="primary" expand="block">Aceptar</ion-button>
+  </section>
 </ion-content>

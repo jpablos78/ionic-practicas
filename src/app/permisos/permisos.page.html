@@ -10,10 +10,22 @@
 </ion-header>
 
 <ion-content>
-  <button pButton type="button" label="Click"></button>
+  <!--<button pButton type="button" label="Click"></button>-->
 
   <!--<p-tree [value]="checkboxSelectionTree" selectionMode="checkbox" [(selection)]="selectedFiles"
     [style]="{'width':'100%','overflow':'auto'}"></p-tree>-->
 
-    <p-tree [value]="files"></p-tree>
+  <!--<p-tree [value]="files"></p-tree>-->
+  <ion-item>
+    <ion-label>Empresa</ion-label>
+    <ion-select placeholder="Seleccione la Empresa" interface="action-sheet">
+      <ion-select-option value="008">Globaltex S.A.</ion-select-option>
+      <ion-select-option value="009">Texfashion S.A.</ion-select-option>
+      <ion-select-option value="012">Pasarella S.A.</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <p-tree [value]="checkboxSelectionTree" [style]="{'width':'100%','overflow':'auto'}"></p-tree>
+  </ion-item>
 </ion-content>

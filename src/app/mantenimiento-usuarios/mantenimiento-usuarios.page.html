@@ -12,13 +12,19 @@
 <ion-content>
   <ion-searchbar></ion-searchbar>
 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="onClickBtnAdd()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
   <ion-list>
     <ion-list-header>
       Listado de Usuarios
     </ion-list-header>
 
     <ion-item-sliding>
-      <ion-item>
+      <ion-item  [routerLink]="['/mantenimiento-usuarios/1']" routerDirection="forward">
         <ion-grid>
           <ion-row>
             <ion-col size="4">
@@ -59,14 +65,14 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger">
+        <ion-item-option color="danger" (click)="onClickBtnDelete()">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
     <ion-item-sliding>
-      <ion-item>
+      <ion-item [routerLink]="['/mantenimiento-usuarios/1']" routerDirection="forward">
         <ion-grid>
           <ion-row>
             <ion-col size="4">
@@ -107,14 +113,14 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger">
+        <ion-item-option color="danger" (click)="onClickBtnDelete()">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
 
     <ion-item-sliding>
-      <ion-item>
+      <ion-item [routerLink]="['/mantenimiento-usuarios/1']" routerDirection="forward">
         <ion-grid>
           <ion-row>
             <ion-col size="4">
@@ -155,7 +161,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger">
+        <ion-item-option color="danger" (click)="onClickBtnDelete()">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
       </ion-item-options>
