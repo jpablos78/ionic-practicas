@@ -6,6 +6,31 @@ section {
 ion-select{
     max-width: 100% !important;
 }
+/*
+body .ui-tree {
+    border: 1px solid #c8c8c8;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.571em 1em;
+    width: 50%;
+  }
+
+  :host>>>.my-tree .ui-tree {    
+    width: 100%;
+} 
+
+:host>>>.ui-tree {
+    background: #246bc2!important;
+    color: #FFFFFF!important;
+}
+*/
+:host ::ng-deep .ui-tree {
+    background-color: #d90096; //<Replace your custom color>
+    //border: 1px solid #d600d9;
+    //margin-top: 15px;
+    //margin-bottom: 15px;
+    width: 100%;
+}
 
 //.ui-tree{width:90%}
 /*
@@ -17,16 +42,19 @@ ui-tree {
    margin-left: auto;
    margin-right: auto;
 }*/
-
-.my-ui-tree {
+/*
+.ui-tree {
     margin-top: 15px;
     margin-bottom: 15px;
  
-    max-width: 100% !important;
-    margin-left: auto;
-    margin-right: auto;
+    //max-width: 80% !important;
+    //margin-left: auto;
+    //margin-right: auto;
     }
-    
+    */
+/*.my-tree ui-tree ui-widget ui-widget-content ui-corner-all ui-tree-selectable {
+    width: 100%;
+}*/
 
 /*
 ui-tree {
