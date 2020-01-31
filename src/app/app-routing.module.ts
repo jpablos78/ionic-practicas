@@ -62,7 +62,17 @@ const routes: Routes = [
   },
   {
     path: 'procesar-documentos-electronicos',
-    loadChildren: () => import('./procesar-documentos-electronicos/procesar-documentos-electronicos.module').then(m => m.ProcesarDocumentosElectronicosPageModule)
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./procesar-documentos-electronicos/procesar-documentos-electronicos.module').then(m => m.ProcesarDocumentosElectronicosPageModule)
+      },
+      {
+        path: ":idMail",
+        loadChildren: () => import('./procesar-documentos-electronicos/enviar-mail/enviar-mail.module').then(m => m.EnviarMailPageModule)
+      }
+    ]
+
   },
   {
     path: 'mantenimiento-perfil-add',

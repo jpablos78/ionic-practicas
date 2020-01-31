@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ButtonModule } from 'primeng/button';
 import {TreeModule} from 'primeng/tree';
-import {TreeNode} from 'primeng/api';
 
 import { PermisosPageRoutingModule } from './permisos-routing.module';
 

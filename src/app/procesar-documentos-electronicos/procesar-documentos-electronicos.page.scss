@@ -1,0 +1,16 @@
+ion-select{
+    max-width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+ion-item {
+    margin: 0;
+    padding: 0;
+}
+
+:host ::ng-deep .ui-panel{
+    background-color: #d90096;
+    margin: 0;
+  padding: 0;
+}

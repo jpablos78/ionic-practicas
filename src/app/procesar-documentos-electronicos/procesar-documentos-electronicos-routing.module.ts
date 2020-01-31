@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: ProcesarDocumentosElectronicosPage
+  },
+  {
+    path: 'enviar-mail',
+    loadChildren: () => import('./enviar-mail/enviar-mail.module').then( m => m.EnviarMailPageModule)
   }
 ];
 
